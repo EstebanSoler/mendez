@@ -197,7 +197,7 @@ ActiveRecord::Schema.define(:version => 20130807183138) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.text     "description",        :limit => 255
+    t.string   "description"
   end
 
   create_table "staffs", :force => true do |t|
