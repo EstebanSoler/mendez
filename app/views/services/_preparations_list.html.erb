@@ -1,0 +1,11 @@
+<% if current_service.preparations.any? %>
+  <br/>
+  <div id="services-box">
+    <h2>Preparacion</h2>
+    <ul class="side-nav">
+      <% current_service.preparations.each do |preparation| %>
+      <li><%= link_to preparation.name, preparation_path(preparation)%></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

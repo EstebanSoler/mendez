@@ -1,0 +1,51 @@
+#container, html.embed {
+  background-color: #efefef;
+}
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file {
+  font-family: inherit;
+  border-radius: 7px;
+}
+
+.wufoo label.desc, .wufoo legend.desc {
+  font-family: myriadprolight;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.wufoo .info div {
+  font-family: myriadprolight;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  color: #2D673E;
+}
+
+.wufoo .info h2 {
+  visibility: hidden;
+}
+
+element.style {
+  visibility: hidden !important;
+}
+
+input.btTxt {
+  width: 144px;
+  height: 47px;
+  margin-left: 43%;
+  border-radius: 16px;
+  background-color: rgb(0,131,69);
+  background-image: -webkit-radial-gradient(left, circle cover, #30a049 5%, #008345 60%);
+  font-weight: bold;
+  color: white;
+  border-width: 0px;
+}
+
+input.medium, select.medium {
+  width: 94%;
+  height: 32px;
+}
+
+textarea.textarea {
+  width: 94%;
+  min-width: 0;
+}

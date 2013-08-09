@@ -1,0 +1,14 @@
+<% if Graduate.all.any? %>
+  <h3>Residentes Egresados</h3>
+  <ol class="a">
+    <% Graduate.all.each do |graduate| %>
+    <li>
+      <strong><%= graduate.graduation_year %></strong>
+      <br /><%= graduate.profesional_name %>
+      <br /><%= graduate.specialty %>
+      <br /><%= graduate.email %>
+    </li>
+    <br />
+    <% end %>
+  </ol>
+<% end %>

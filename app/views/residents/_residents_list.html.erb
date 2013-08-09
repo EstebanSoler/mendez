@@ -1,0 +1,13 @@
+<h3>Nuestros Residentes</h3>
+    <p>La residencia en Diagnóstico por Imagenes del Centro Radiológico Mendez Collado fue creada en el año 1992 y desde entonces funciona regularmente y sin interrupción.
+    </p>
+    <% if Resident.all.any? %>
+      <ul>
+        <% Resident.all.each do |resident| %>
+          <li><%= resident.profesional_name %> <%= resident.period %></li>
+        <% end %>
+        </ul>
+      <% end %>
+       <%= image_tag ResidentPhoto.last.image.url(:large), width:"480", height:"225" %>
+       <br />
+<br /> 

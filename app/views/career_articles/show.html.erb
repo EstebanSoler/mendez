@@ -1,0 +1,34 @@
+<div id="pagina-info">
+  <%= render 'title_bar' %>
+  <%= render 'sub_menu' %>
+
+  <div class="row">
+    <div class="large-8 columns">
+      <article>
+        <%= current_career_article.body.html_safe %>
+      </article>
+    </br>
+    </div>
+
+    <div class="large-4 columns">
+      <%= render 'info_panel' %>
+
+      <div class="info-panel">
+        <div class="panel panel-blue">
+          <figure class="responsive"
+            data-media="http://mc-cms-production.s3.amazonaws.com/carrera/icon-iso-small.png"
+            data-media768="http://mc-cms-production.s3.amazonaws.com/carrera/icon-iso-medium.png"
+            data-media960="http://mc-cms-production.s3.amazonaws.com/carrera/icon-iso-large.png" title="Calidad">
+            <noscript>
+              <img src="http://mc-cms-production.s3.amazonaws.com/carrera/sidebar-picture1-large.png" alt="Calidad">
+            </noscript>
+          </figure>
+          <div class="description">
+            <h1>Certificación Sistema de Gestión de Calidad</h1>
+            <a class="link_button" href="#">VER MÁS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

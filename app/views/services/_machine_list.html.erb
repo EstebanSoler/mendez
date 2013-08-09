@@ -1,0 +1,23 @@
+<% if Machine.all.any? %>
+  <% Machine.last(3).each do |machine| %>
+    <div class="large-4 columns">
+      <div class="box-main-service">
+        <div class="main-services">
+          <figure class="responsive" 
+            data-media= <%=machine.image.url(:small)%>
+            data-media768=  <%=machine.image.url(:medium)%>
+            data-media960= <%=machine.image.url(:large)%> title="Servicios">
+            <noscript>
+              <%= image_tag machine.image.url(:large) %>
+            </noscript>
+          </figure>
+          <div class="flag-new"></div>
+        </div>
+        <h2><%= machine.name %></h2>
+        <p><%= machine.description %></p>
+        <%= link_to "VER MÁS", machine_path(machine), :class=>"link_button btn_orange"%>
+        <div class="shadow"></div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,16 @@
+<% if current_type_of_service.services.first.service_photos.any? %>
+  <% current_type_of_service.services.first.service_photos.each do |photo| %>
+      <div class="info-panel">
+        <div class="panel">
+          <figure class="responsive" 
+            data-media= <%=photo.image.url(:small)%>
+            data-media768=  <%=photo.image.url(:medium)%>
+            data-media960= <%=photo.image.url(:large)%> title="Servicios">
+            <noscript>
+              <%= image_tag photo.image.url(:large) %>
+            </noscript>
+          </figure>
+        </div>
+      </div>
+  <% end %>
+<% end %>

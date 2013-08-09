@@ -1,0 +1,16 @@
+<div id="sub_menu">
+  <div class="row">
+    <div class="large-12 columns">
+      <dl class="sub-nav">
+        <% if CareerArticle.all.any? %>
+          <% CareerArticle.all.each_with_index do |career_article,i| %>
+            <dd><%= link_to career_article.title, 
+              career_article_path(career_article)%></dd>
+          <% end %>
+        <% end %>
+          <dd class="last"><%= link_to "Preinscripción", 
+          career_preinscription_path %></dd>
+      </dl>
+    </div>
+  </div>
+</div>

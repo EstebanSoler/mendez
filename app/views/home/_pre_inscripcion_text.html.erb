@@ -1,0 +1,6 @@
+<% if Preinscription.all.any? %>
+  <br />
+  <%= Preinscription.last.body.html_safe%>
+  <% else%>
+  <%= render 'pre_inscripcion_default' %>
+<% end %>

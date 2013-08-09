@@ -1,0 +1,11 @@
+<% if current_type_of_service.services.first.preparations.any? %>
+  <br/>
+  <div id="services-box">
+    <h2>Preparacion</h2>
+    <ul class="side-nav">
+      <% current_type_of_service.services.first.preparations.each do |preparation| %>
+      <li><%= link_to preparation.name, preparation_path(preparation)%></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

@@ -1,0 +1,112 @@
+header {
+  margin-bottom: 24px;
+
+  #logo {
+    background: url("layout/logo-white.png") no-repeat;
+    width: 96px;
+    height: 125px;
+    display: block;
+    @include  hide-text;
+    margin: 50px auto 0;
+  }
+
+  #phone {
+    text-align: center;
+
+    background-color: #e2e2e2;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    height: 40px;
+    margin: 29px auto 0;
+    @include border-radius(5px);
+    overflow: hidden;
+
+    img {
+      margin-bottom: 3px;
+    }
+
+    p {
+      display: inline-block;
+      margin-left: 8px;
+
+      line-height: 17px;
+      padding-left: 10px;
+      margin-top: 4px;
+      border-left: 1px solid #d0d0d0;
+      font-weight: bold;
+      font-size: 13px;
+      color: #006837;
+
+        a {
+          color: #006837;
+        }
+    }
+  }
+
+  .top-bar-phone {
+    width: 100%;
+    height: 56px;
+  }
+
+  .top-bar-section {
+    
+    #mail {
+
+      a {
+        background: url("layout/mail.jpg") no-repeat center 12px;
+        width: 21px;
+        display: block;
+        @include  hide-text;
+      }
+    }
+
+    ul {
+      border-radius: 5px 5px 0px 0px;
+      overflow: hidden;
+      background: none;
+
+      .divider {
+        border-color: white;
+        height: 50px;
+        display: none;
+      }
+
+      li {
+
+        a:not(.button) {
+          line-height: 56px;
+          padding: 0 10px;
+        }
+
+
+        &#mail {
+
+          a {
+            margin: 0 auto;
+            padding: 0 14px;
+          }
+        }
+
+        a {
+          line-height: 50px;
+          font-weight: normal;
+          font-size: 18px;
+          text-align: center;
+          color: #2d673e
+        }
+
+        &.selected {
+          a:not(.button) {
+            background-color: #B3B3B3;
+          }
+        }
+      }
+    }
+  }
+
+  .top-bar {
+    height: auto;
+    margin: 0px;
+  }
+}

@@ -1,0 +1,20 @@
+<div id="sub_menu">
+  <div class="row">
+    <div class="large-12 columns">
+      <dl class="sub-nav">
+        <% if current_type_of_service.services.any? %>
+        <dd><%= link_to  "Volver", :back, :class=>"last" %></dd>
+          <% current_type_of_service.services.each_with_index do |servicio,i| %>
+            <% if i == (current_type_of_service.services.count - 1) %>
+              <dd class="last"><%= link_to servicio.name, 
+              service_path(servicio)%></dd>
+            <% else %>
+              <dd><%= link_to servicio.name, 
+              service_path(servicio)%></dd>
+            <% end %>
+          <% end %>
+        <% end %>
+      </dl>
+    </div>
+  </div>
+</div>

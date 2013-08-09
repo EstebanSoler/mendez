@@ -1,0 +1,35 @@
+@media #{$tablet}{
+  #servicios {
+
+    .main {
+
+      .main-services {
+        height: 152px;
+      }
+
+      h2 {
+        font-size: 17px;
+      }
+
+      .shadow {
+        background: url(shared/shadow-medium.png) no-repeat center;
+        width: 233px;
+        height: 10px;
+      }
+    }
+
+    .secondary {
+
+      .image {
+        width: 238px;
+        height: 161px;
+        width: 238px;
+      }
+
+      .description {
+        width: 125px;
+      }
+    }
+
+  }
+}

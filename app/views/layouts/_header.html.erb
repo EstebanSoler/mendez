@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="large-3 columns">
+    <%= link_to "Mendez collado", home_index_path, :id => "logo"%>
+  </div>
+  <div class="large-9 columns">
+    <div class="top-bar-phone">
+      <div id="phone">
+        <img src=<%= asset_path("layout/phone.png")%> alt="Teléfono">
+        <p>
+          <a href="tel:+54 381 421-7000">+54 (381) 421-7000</a>
+          <br>
+          <a href="tel:+54 381 430-2134">+54 (381) 430-2134</a>
+        </p>
+      </div>
+    </div>
+    <nav class="top-bar">
+      <section class="top-bar-section">
+        <%= render 'layouts/menu' %>
+      </section>
+    </nav>
+  </div>
+</div>

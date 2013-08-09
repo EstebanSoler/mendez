@@ -1,0 +1,23 @@
+<% if Service.all.any? %>
+  <% Service.last(3).each do |servicio| %>
+    <div class="large-4 columns">
+      <div class="box-main-service">
+        <div class="main-services">
+          <figure class="responsive" 
+            data-media= <%=servicio.image.url(:small)%>
+            data-media768=  <%=servicio.image.url(:medium)%>
+            data-media960= <%=servicio.image.url(:large)%> title="Servicios">
+            <noscript>
+              <%= image_tag servicio.image.url(:large) %>
+            </noscript>
+          </figure>
+          <div class="flag-new"></div>
+        </div>
+        <h2><%= servicio.name %></h2>
+        <p><%= servicio.description %></p>
+        <a href="#" class="link_button btn_orange">VER MÁS</a>
+        <div class="shadow"></div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

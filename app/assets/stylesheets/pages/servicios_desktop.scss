@@ -1,0 +1,48 @@
+@media #{$small} {
+  #servicios {
+
+    // .columns {
+    //   margin-right: 0;
+    //   margin-left: 0;
+    //   float: left;
+    // }
+
+    .box-main-service {
+      width: 100%;
+    }
+
+    .main {
+
+      .main-services {
+        height: 190px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        line-height: 20px;
+      }
+
+      .shadow {
+        background: url(shared/shadow-large.png) no-repeat center;
+        width: 290px;
+        height: 12px;
+      }
+    }
+
+    .secondary {
+
+      .image {
+        width: 294px;
+        height: 155px;
+        width: 294px;
+      }
+
+      .description {
+        left: 48%;
+      }
+    }
+  }
+}

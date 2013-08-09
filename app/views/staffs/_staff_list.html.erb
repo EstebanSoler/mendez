@@ -1,0 +1,23 @@
+<% if Staff.all.any? %>
+  <div class="large-12 columns">
+    <ul>
+      <% Staff.all.each do |staff| %>
+        <li>
+          <a href="<%= staff_path(staff) %>">
+            <div class="staff-box">
+              <figure class="responsive"
+                data-media=<%=staff.avatar.url(:small)%>
+                data-media768=<%=staff.avatar.url(:medium)%>
+                data-media960=<%=staff.avatar.url(:large)%> title="Staff">
+                <noscript>
+                  <%= image_tag staff.avatar.url(:large) %>
+                </noscript>
+              </figure>
+              <div class="info"><%= staff.profesional_name %></div>
+            </div>
+          </a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

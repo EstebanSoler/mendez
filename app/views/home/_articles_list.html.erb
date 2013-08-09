@@ -1,0 +1,33 @@
+<% if Article.all.any? %>
+  <% Article.last(4).each_with_index do |article,i| %>
+    <% if i==0 or i==2 %>
+      <div class="row">
+    <% end %>
+    <div class="large-6 columns">
+      <% if i< 2 %>
+        <article class="first">
+      <% else %>
+        <article>
+      <% end %>
+        <h3><%= article.title %></h3>
+        <div class="description">
+          <% if article.image.exists? then %>
+           <figure class="responsive"
+            data-media= <%=article.image.url(:small)%>
+            data-media768= <%=article.image.url(:medium)%>
+            data-media960=<%=article.image.url(:large)%> title="Servicios">
+              <noscript>
+                <%= image_tag article.image.url(:large) %>
+              </noscript>
+          </figure>
+          <% end %>
+          <p><%= article.description %></p>
+          <%= link_to "VER MAS...", article_path(article)%>
+        </div>
+      </article>
+    </div>
+    <% if i==1 or i==3 %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

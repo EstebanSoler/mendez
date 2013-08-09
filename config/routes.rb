@@ -1,61 +1,47 @@
 Mendezcollado::Application.routes.draw do
+
+  root to: "home#index"
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
+  resources :home, only: [:index]
+  resources :career_articles, only: [:index, :show]
+  resources :staffs, only: [:index, :show]
+  resources :services, only: [:index, :show]
+  resources :type_of_services, only: [:show]do
+    resources :services, only: [:show]
+  end
+  resources :history, only: [:index]
+  resources :resolucion_1504003, only: [:index]
+  resources :machines, only: [:show]
+  resources :residents, only: [:index]
+  resources :articles, only: [:show]
+  resources :slide_infos, only: [:show]
+  resources :welcomes, only: [:show]
+  resources :preparations, only: [:show]
 
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
 
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
+  get "who_we_are/index"
+  get "contact/index"
+  get "history/in_memoriam"
+  get "home/certificacion_iso"
+  get "home/pre_inscripciones"
+  get "home/links"
+  get "career_articles/preinscripcion_carrera"
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  get "/services/type_of_services/:id", 
+    to: 'type_of_services#show', as: 'services_types'
+  get "/services/type_of_services/:service_id", 
+    to: 'services#show', as: 'services_show'
+  get "quienes-somos", 
+    to: 'who_we_are#index', as: 'quienes_somos'
+  get "empresa", 
+    to: 'home#index', as: 'empresa'
+  get "empresa/certificacion_iso", 
+    to: 'home#certificacion_iso', as: 'certificacion_iso'
+  get "empresa/pre_inscripciones", 
+    to: 'home#pre_inscripciones', as: 'pre_inscripciones'
+  get "Carrera/preinscripcion_carrera", 
+    to: 'career_articles#preinscripcion_carrera', as: 'career_preinscription'
 end

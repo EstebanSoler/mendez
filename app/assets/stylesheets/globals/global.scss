@@ -1,0 +1,104 @@
+.link_button {
+  background: url(shared/button-gray.png) no-repeat 0px 0px;
+  display: block;
+  width: 72px;
+  height: 27px;
+  font-size: 10px;
+  color: #4b4b4b;
+  font-family: "Arial";
+  font-weight: bold;
+  text-align: center;
+}
+
+.link_button:hover {
+  color: #4b4b4b;
+  }
+
+.btn_orange {
+  background: url(shared/button-orange.png) no-repeat 0px 0px;
+  color: white;
+  font-family: "Arial";
+}
+
+.btn_orange:hover {
+  color: white;
+}
+
+.flag-new {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: url(shared/flag.png) no-repeat center;
+  width: 60px;
+  height: 59px;
+}
+
+/* override refinery */
+
+#page {
+  #body_content_title {
+    display: none;
+  }
+}
+
+.info-panel {
+   margin: 0 auto 20px;
+   max-width: 350px;
+   @include box-shadow(1px 1px 2px #D0D0D0);
+
+  .panel {
+    padding-bottom: 30px;
+    margin-bottom: 0.25em;
+    background-color: white;
+    min-height: auto !important;
+    border: none;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .description {
+      padding-top: 20px;
+
+      h1 {
+        font-family: "Arial";
+        font-size: 23px;
+        font-weight: bold;
+        font-style: italic;
+        color: #ffffff;
+        @include text-shadow(2px 1px 1px #606060);
+      }
+
+      h2 {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-family: "Arial";
+        font-size: 18px;
+        font-weight: bold;
+        color: #008245;
+      }
+
+      h3 {
+        font-size: 14px;
+        color: #808080; 
+      }
+
+      .link_button {
+        line-height: 27px;
+      }
+    }
+
+    &.panel-blue{
+      background-color: #0054a5;
+    }
+
+    p {
+      font-family: arial;
+      font-size: 14px;
+      margin-top: 26px;
+      margin-left: 22px;
+      line-height: 2%;
+    }
+  }
+}

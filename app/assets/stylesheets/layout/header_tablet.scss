@@ -1,0 +1,30 @@
+@media #{$tablet}{
+  header {
+
+    .top-bar-section {
+      ul {
+        
+        li {
+          float: left;
+        }
+
+        .divider{
+          clear: none;
+          width: auto;
+        }
+
+        li a:not(.button){
+          padding: 0 7px;
+        }
+
+        a {
+          line-height: 50px;
+          font-weight: normal;
+          font-size: 15px !important; 
+          text-align: center;
+          color: #2d673e
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<% if TypeOfService.all.any? %>
+  <% TypeOfService.all.each do |tos| %>
+    <div class="large-4 columns">
+      <div class="image">
+        <figure class="responsive" 
+          data-media=<%=tos.image.url(:small)%>
+          data-media768=<%=tos.image.url(:medium)%>
+          data-media960=<%=tos.image.url(:large)%> title="Servicios">
+          <noscript>
+            <img src=<%=tos.image.url(:large)%> alt="Servicios">
+          </noscript>
+        </figure>
+        <div class="description">
+          <h2><%= tos.type_name %></h2>
+          <%= link_to "VER MÁS", 
+                services_types_path(tos), :class => "link_button"%>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

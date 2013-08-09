@@ -1,0 +1,10 @@
+<% if Service.all.any? %>
+  <div id="services-box">
+  <h2>Servicios</h2>
+  <ul class="side-nav">
+    <% Service.all.each do |servicio| %>
+    <li><%= link_to servicio.name, service_path(servicio)%></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>

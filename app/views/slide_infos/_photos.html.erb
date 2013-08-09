@@ -1,0 +1,17 @@
+<% if current_slide.slide_info_photos.any? %>
+  <br/>
+  <% current_slide.slide_info_photos.each do |photo| %>
+      <div class="info-panel">
+        <div class="panel">
+          <figure class="responsive" 
+            data-media= <%=photo.photo.url(:small)%>
+            data-media768=  <%=photo.photo.url(:medium)%>
+            data-media960= <%=photo.photo.url(:large)%> title="Servicios">
+            <noscript>
+              <%= image_tag photo.photo.url(:large) %>
+            </noscript>
+          </figure>
+        </div>
+      </div>
+  <% end %>
+<% end %>
